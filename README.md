@@ -9,6 +9,14 @@ React/Tailwind frontend with an Apple-inspired design language.
 
 ---
 
+## Preview
+
+<p  align="center">
+    <img src="Screenshot (197).png" alt="DocChat-AI Preview" width="900/> 
+</p>
+
+---
+
 ## Features
 
 - 📄 Multi-PDF upload, including drag-and-drop anywhere on the page
