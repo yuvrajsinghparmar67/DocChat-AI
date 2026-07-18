@@ -1,0 +1,21 @@
+# Backend
+backend/venv/
+backend/.env
+backend/storage/uploads/*
+backend/storage/vector_db/*
+backend/storage/metadata.json
+!backend/storage/uploads/.gitkeep
+!backend/storage/vector_db/.gitkeep
+__pycache__/
+*.pyc
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea

@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-surface-subtle text-neutral-900 dark:bg-surface-dark dark:text-neutral-100;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Custom thin, unobtrusive scrollbars used throughout the app */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-300 dark:bg-neutral-700;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutral-400 dark:bg-neutral-600;
+  }
+
+  * {
+    scrollbar-width: thin;
+  }
+}
+
+@layer components {
+  /* Reusable "frosted glass" surface used for headers / floating panels */
+  .glass-panel {
+    @apply bg-white/70 dark:bg-surface-darkSubtle/70 backdrop-blur-md;
+  }
+
+  /* Markdown body styling for assistant chat messages */
+  .prose-chat p {
+    @apply mb-3 leading-relaxed last:mb-0;
+  }
+  .prose-chat ul,
+  .prose-chat ol {
+    @apply mb-3 ml-5 space-y-1;
+  }
+  .prose-chat ul {
+    @apply list-disc;
+  }
+  .prose-chat ol {
+    @apply list-decimal;
+  }
+  .prose-chat code {
+    @apply rounded bg-neutral-100 px-1.5 py-0.5 text-[0.85em] dark:bg-neutral-800;
+  }
+  .prose-chat pre {
+    @apply mb-3 overflow-x-auto rounded-xl bg-neutral-900 p-3 text-neutral-100;
+  }
+  .prose-chat pre code {
+    @apply bg-transparent p-0;
+  }
+  .prose-chat strong {
+    @apply font-semibold;
+  }
+  .prose-chat a {
+    @apply text-accent underline underline-offset-2;
+  }
+}
+
+@layer utilities {
+  .shimmer-bg {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+  }
+}
